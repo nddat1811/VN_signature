@@ -202,9 +202,77 @@ pnpm build
 
 Output sẽ được tạo trong thư mục `.next/`.
 
+### Deploy lên Netlify
+
+Dự án đã được cấu hình sẵn để deploy lên Netlify với file `netlify.toml`.
+
+#### Cách 1: Deploy qua Netlify UI
+
+1. **Cài đặt Netlify plugin (nếu chưa có)**
+   
+   Thêm vào `package.json` trong `devDependencies`:
+   ```bash
+   pnpm add -D @netlify/plugin-nextjs
+   ```
+
+2. **Push code lên GitHub**
+
+3. **Truy cập [Netlify](https://app.netlify.com/)**
+
+4. **Import project từ GitHub**
+   - Chọn "Add new site" > "Import an existing project"
+   - Chọn repository của bạn
+   - Netlify sẽ tự động detect cấu hình từ `netlify.toml`
+
+5. **Kiểm tra Build Settings** (tự động từ `netlify.toml`):
+   - Build command: `pnpm build`
+   - Publish directory: `.next`
+   - Node version: `20`
+
+6. **Deploy!**
+
+#### Cách 2: Deploy qua Netlify CLI
+
+1. **Cài đặt Netlify CLI**
+   ```bash
+   pnpm add -g netlify-cli
+   ```
+
+2. **Login vào Netlify**
+   ```bash
+   netlify login
+   ```
+
+3. **Deploy**
+   ```bash
+   netlify deploy --prod
+   ```
+
+#### ⚠️ Lưu ý quan trọng khi deploy lên Netlify
+
+1. **Đảm bảo có file `netlify.toml`** trong root của project (đã có sẵn)
+2. **Cài đặt plugin Netlify**:
+   ```bash
+   pnpm add -D @netlify/plugin-nextjs
+   ```
+3. **Kiểm tra Build Command**: Phải là `pnpm build` hoặc `npm run build`
+4. **Kiểm tra Publish Directory**: Phải là `.next`
+5. **Node Version**: Netlify cần Node 18+ (đã cấu hình trong `netlify.toml`)
+
+#### 🐛 Xử lý lỗi 404 trên Netlify
+
+Nếu gặp lỗi "Page not found" sau khi deploy:
+
+1. **Kiểm tra file `netlify.toml`** có đúng cấu hình redirect không
+2. **Đảm bảo plugin `@netlify/plugin-nextjs` đã được cài đặt**
+3. **Kiểm tra build logs** trên Netlify Dashboard xem có lỗi gì không
+4. **Clear cache và rebuild**:
+   - Vào Netlify Dashboard > Site settings > Build & deploy > Clear cache
+   - Trigger một deploy mới
+
 ### Deploy lên Vercel
 
-Dự án được tối ưu để deploy lên Vercel:
+Dự án cũng có thể deploy lên Vercel (dễ dàng hơn cho Next.js):
 
 1. Push code lên GitHub
 2. Import project vào Vercel
