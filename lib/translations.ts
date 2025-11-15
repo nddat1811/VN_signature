@@ -1,4 +1,4 @@
-type Language = 'vi' | 'en' | 'zh';
+export type Language = 'vi' | 'en' | 'zh';
 
 interface Landmark {
   name: string;

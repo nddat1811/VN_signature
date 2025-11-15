@@ -76,11 +76,11 @@ export default function QuickNavigation({ landmarks, language }: QuickNavigation
   };
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 hidden md:block">
+    <div className="fixed bottom-4 right-4 z-50">
       <div className="relative" ref={menuRef}>
         {/* Dropdown Menu - Above button */}
         {isOpen && (
-          <div className="absolute right-0 bottom-full mb-0 w-64 max-h-[280px] overflow-y-auto bg-popover border border-border rounded-lg rounded-b-none shadow-xl">
+          <div className="absolute right-0 bottom-full mb-0 w-64 sm:w-72 max-h-[280px] overflow-y-auto bg-popover border border-border rounded-lg rounded-b-none shadow-xl">
             <div className="p-2 space-y-1">
               {landmarks.map((landmark, index) => (
                 <button
@@ -119,7 +119,7 @@ export default function QuickNavigation({ landmarks, language }: QuickNavigation
           onClick={() => setIsOpen(!isOpen)}
           className={`
             flex items-center gap-2
-            px-4 py-3
+            px-3 py-2.5 sm:px-4 sm:py-3
             bg-accent text-accent-foreground
             rounded-lg
             shadow-lg hover:shadow-xl
@@ -130,12 +130,12 @@ export default function QuickNavigation({ landmarks, language }: QuickNavigation
           aria-label="Danh sách địa danh"
           title="Danh sách địa danh"
         >
-          <List className="w-5 h-5" />
+          <List className="w-4 h-4 sm:w-5 sm:h-5" />
           <span className="hidden sm:inline">Danh sách</span>
           {isOpen ? (
-            <ChevronUp className="w-4 h-4 transition-transform duration-200" />
+            <ChevronUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-200" />
           ) : (
-            <ChevronDown className="w-4 h-4 transition-transform duration-200" />
+            <ChevronDown className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-200" />
           )}
         </button>
       </div>
