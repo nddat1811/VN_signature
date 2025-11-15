@@ -21,7 +21,7 @@ interface Translations {
 
 const translations: Record<Language, Translations> = {
   vi: {
-    title: 'Danh Lam Thắng Cảnh Thành Phố Hồ Chí Minh',
+    title: 'Danh lam thắng cảnh TPHCM',
     subtitle: 'Khám phá vẻ đẹp và giá trị lịch sử của những địa điểm nổi tiếng nhất Thành phố Hồ Chí Minh',
     viewDetail: 'Xem Chi Tiết',
     backToList: 'Quay lại danh sách',
@@ -169,6 +169,24 @@ const translations: Record<Language, Translations> = {
           '/nh1.jpg',
           '/nh2.jpg',
           '/nh3.jpg'
+        ]
+      },
+      {
+        name: 'Hồ Con Rùa',
+        nameEnglish: 'Turtle Lake',
+        location: 'Giao lộ Phạm Ngọc Thạch – Võ Văn Tần – Trần Cao Vân, Quận 3, Thành phố Hồ Chí Minh',
+        description: 'Hồ Con Rùa là một trong những địa điểm quen thuộc và mang tính biểu tượng của Sài Gòn, nằm ngay giao lộ Phạm Ngọc Thạch – Võ Văn Tần – Trần Cao Vân thuộc Quận 3, chỉ cách trung tâm vài phút di chuyển.',
+        paragraphs: [
+          'Hồ Con Rùa là một trong những địa điểm quen thuộc và mang tính biểu tượng của Sài Gòn, nằm ngay giao lộ Phạm Ngọc Thạch – Võ Văn Tần – Trần Cao Vân thuộc Quận 3, chỉ cách trung tâm vài phút di chuyển. Dù hiện nay hồ đã được cải tạo khá nhiều so với thời xưa, nhưng cái tên "Hồ Con Rùa" vẫn được người dân giữ lại như một phần ký ức đặc biệt. Khu vực này vừa là nơi hóng mát, gặp gỡ của giới trẻ, vừa là không gian gắn liền với nhiều câu chuyện lịch sử thú vị.',
+          'Tên gọi "Hồ Con Rùa" xuất phát từ một công trình điêu khắc hình rùa từng nằm giữa hồ vào thập niên 1960–1970. Theo tài liệu, trước đây khu vực này là một vòng xoay với đài phun nước lớn, ở giữa có tượng rùa bằng kim loại đội bia đá khắc hình 5 vị tướng thần linh trong truyền thuyết. Tuy nhiên, công trình này đã bị phá hủy vào cuối thập niên 1970, ngày nay chỉ còn lại hồ nước nhỏ và đài phun nước hiện đại. Dù vậy, người Sài Gòn vẫn quen gọi nơi đây bằng tên cũ, như một cách lưu giữ nét đẹp văn hóa – lịch sử của thành phố.',
+          'Điều làm Hồ Con Rùa trở thành địa điểm yêu thích của giới trẻ chính là không khí thoáng mát, nhiều bóng cây xanh và không gian mở rất dễ chịu, đặc biệt vào buổi tối. Xung quanh hồ có rất nhiều quán ăn vặt nổi tiếng như bánh tráng trộn, bánh tráng nướng, xiên que, trà sữa… tạo nên một "thiên đường ăn vặt" đúng nghĩa. Buổi tối, khu vực này rất nhộn nhịp với các nhóm bạn tụ tập trò chuyện, chụp ảnh hoặc đơn giản là ngồi quanh hồ ngắm dòng xe cộ qua lại – một cảnh tượng mang đậm chất Sài Gòn đường phố.',
+          'Ngoài vẻ trẻ trung, Hồ Con Rùa còn nằm giữa nhiều công trình đẹp của Sài Gòn như Nhà thờ Tân Định, Dinh Độc Lập, và chỉ cách vài phút đi bộ đến các khu phố sầm uất khác. Với vị trí thuận tiện, không gian dễ chịu và vẻ đẹp pha lẫn hoài niệm – hiện đại, Hồ Con Rùa trở thành điểm đến quen thuộc của người dân và du khách muốn cảm nhận nhịp sống thường ngày của thành phố. Đây là một nơi lý tưởng để nghỉ chân, hóng mát, thưởng thức món ăn vặt và cảm nhận sự năng động, trẻ trung rất đặc trưng của Sài Gòn.'
+        ],
+        image: '/cr1.jpg',
+        images: [
+          '/cr1.jpg',
+          '/cr2.jpg',
+          '/cr3.jpg'
         ]
       }
     ]
@@ -323,6 +341,24 @@ const translations: Record<Language, Translations> = {
           '/nh2.jpg',
           '/nh3.jpg'
         ]
+      },
+      {
+        name: 'Turtle Lake',
+        nameEnglish: 'Hồ Con Rùa',
+        location: 'Intersection of Pham Ngoc Thach – Vo Van Tan – Tran Cao Van, District 3, Ho Chi Minh City',
+        description: 'Turtle Lake is one of the familiar and iconic landmarks of Saigon, located right at the intersection of Pham Ngoc Thach – Vo Van Tan – Tran Cao Van in District 3, just a few minutes from the city center.',
+        paragraphs: [
+          'Turtle Lake is one of the familiar and iconic landmarks of Saigon, located right at the intersection of Pham Ngoc Thach – Vo Van Tan – Tran Cao Van in District 3, just a few minutes from the city center. Although the lake has been renovated quite a bit compared to the old days, the name "Turtle Lake" is still kept by the people as a special part of memory. This area is both a place for young people to relax and meet up, and a space associated with many interesting historical stories.',
+          'The name "Turtle Lake" originates from a turtle-shaped sculpture that once stood in the middle of the lake in the 1960s–1970s. According to documents, this area was once a roundabout with a large fountain, and in the center there was a metal turtle statue carrying a stone stele carved with images of 5 mythical generals in legend. However, this structure was destroyed in the late 1970s, and today only the small lake and modern fountain remain. Nevertheless, Saigon people still call this place by its old name, as a way to preserve the cultural – historical beauty of the city.',
+          'What makes Turtle Lake a favorite spot for young people is the cool atmosphere, lots of green trees, and very pleasant open space, especially in the evening. Around the lake there are many famous snack shops such as mixed rice paper, grilled rice paper, skewers, milk tea… creating a true "snack paradise". In the evening, this area is very bustling with groups of friends gathering to chat, take photos, or simply sit around the lake watching the traffic pass by – a scene that embodies the essence of Saigon street life.',
+          'In addition to its youthful vibe, Turtle Lake is also located among many beautiful structures of Saigon such as Tan Dinh Church, Reunification Palace, and is just a few minutes\' walk from other bustling neighborhoods. With its convenient location, pleasant space, and beauty that blends nostalgia with modernity, Turtle Lake has become a familiar destination for locals and tourists who want to experience the daily rhythm of the city. This is an ideal place to rest, relax, enjoy snacks and feel the dynamic, youthful energy that is very characteristic of Saigon.'
+        ],
+        image: '/cr1.jpg',
+        images: [
+          '/cr1.jpg',
+          '/cr2.jpg',
+          '/cr3.jpg'
+        ]
       }
     ]
   },
@@ -475,6 +511,24 @@ const translations: Record<Language, Translations> = {
           '/nh1.jpg',
           '/nh2.jpg',
           '/nh3.jpg'
+        ]
+      },
+      {
+        name: '龟湖',
+        nameEnglish: 'Turtle Lake',
+        location: '胡志明市第三郡范玉石-武文探-陈高云十字路口',
+        description: '龟湖是西贡熟悉且具有标志性的地标之一，位于第三郡范玉石-武文探-陈高云的十字路口，距离市中心仅几分钟路程。',
+        paragraphs: [
+          '龟湖是西贡熟悉且具有标志性的地标之一，位于第三郡范玉石-武文探-陈高云的十字路口，距离市中心仅几分钟路程。虽然这个湖与旧时相比已经进行了相当多的改造，但"龟湖"这个名字仍然被人们保留作为特殊的记忆。这个区域既是年轻人纳凉、聚会的地方，也是一个与许多有趣历史故事相关的空间。',
+          '"龟湖"这个名字来源于1960-1970年代曾经位于湖中央的一个乌龟形状雕塑。根据文献资料，这个区域曾经是一个带有大型喷泉的环形交叉路口，中央有一个金属乌龟雕像，背负着刻有传说中5位神话将军形象的石碑。然而，这座建筑在1970年代末被摧毁，如今只剩下小湖和现代喷泉。尽管如此，西贡人仍然习惯用旧名字称呼这个地方，以此保存城市的文历史之美。',
+          '使龟湖成为年轻人喜爱地点的原因是凉爽的氛围、大量的绿树和非常宜人的开放空间，尤其是在晚上。湖周围有许多著名的小吃店，如混合米纸、烤米纸、串烧、奶茶等，创造了一个真正的"小吃天堂"。晚上，这个区域非常热闹，朋友们聚在一起聊天、拍照，或者简单地坐在湖边观看过往的交通——一个体现西贡街头生活精髓的场景。',
+          '除了年轻的氛围，龟湖还位于西贡许多美丽建筑之间，如新定教堂、统一宫，并且只需步行几分钟即可到达其他繁华的街区。凭借其便利的位置、宜人的空间以及融合怀旧与现代的美感，龟湖已成为想要体验城市日常生活节奏的当地人和游客的熟悉目的地。这是一个理想的休息、纳凉、享受小吃和感受西贡特有的充满活力、年轻能量的地方。'
+        ],
+        image: '/cr1.jpg',
+        images: [
+          '/cr1.jpg',
+          '/cr2.jpg',
+          '/cr3.jpg'
         ]
       }
     ]

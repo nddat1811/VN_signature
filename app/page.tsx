@@ -4,6 +4,7 @@ import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Header from '@/components/header';
 import LandmarkListCard from '@/components/landmark-list-card';
+import QuickNavigation from '@/components/quick-navigation';
 import { getTranslations } from '@/lib/translations';
 
 type Language = 'vi' | 'en' | 'zh';
@@ -52,6 +53,11 @@ function HomeContent() {
           ))}
         </div>
       </div>
+
+      <QuickNavigation 
+        landmarks={t.landmarks.map(l => ({ name: l.name, nameEnglish: l.nameEnglish }))}
+        language={language}
+      />
     </main>
   );
 }

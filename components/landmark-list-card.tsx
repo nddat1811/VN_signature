@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { getTranslations } from '@/lib/translations';
 import type { Language } from '@/lib/translations';
+import CopyButton from './copy-button';
 
 interface Landmark {
   name: string;
@@ -27,17 +28,25 @@ export default function LandmarkListCard({ landmark, language, id, reversed = fa
     : landmark.description;
 
   return (
-    <Link href={`/landmarks/${id}?lang=${language}`} className="block group">
-      <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center ${reversed ? 'md:grid-flow-dense' : ''} hover:opacity-90 transition-opacity`}>
+    <div id={`landmark-${id}`} className="scroll-mt-20">
+      <Link href={`/landmarks/${id}?lang=${language}`} className="block group">
+        <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center ${reversed ? 'md:grid-flow-dense' : ''} hover:opacity-90 transition-opacity`}>
         {/* Text Content */}
         <div className={`space-y-4 ${reversed ? 'md:order-2' : 'md:order-1'}`}>
           <div className="space-y-2">
             <p className="text-sm font-medium text-accent uppercase tracking-widest">
               {landmark.location}
             </p>
-            <h3 className="text-4xl md:text-5xl font-serif font-bold text-foreground group-hover:text-accent transition-colors">
-              {landmark.name}
-            </h3>
+            <div className="flex items-center gap-2 group/title">
+              <h3 className="text-4xl md:text-5xl font-serif font-bold text-foreground group-hover:text-accent transition-colors">
+                {landmark.name}
+              </h3>
+              <CopyButton 
+                text={landmark.name}
+                size="sm"
+                className="opacity-0 group-hover/title:opacity-100 transition-opacity"
+              />
+            </div>
             <p className="text-lg text-muted-foreground italic">
               {landmark.nameEnglish}
             </p>
@@ -68,6 +77,7 @@ export default function LandmarkListCard({ landmark, language, id, reversed = fa
         </div>
       </div>
     </Link>
+    </div>
   );
 }
 

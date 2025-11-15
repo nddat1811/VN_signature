@@ -5,6 +5,7 @@ import { useParams, useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Header from '@/components/header';
 import ImageModal from '@/components/image-modal';
+import CopyButton from '@/components/copy-button';
 import { getLandmarkById, getTranslations } from '@/lib/translations';
 import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -216,9 +217,16 @@ function LandmarkDetailContent() {
               <p className="text-xs sm:text-sm font-medium text-accent uppercase tracking-widest">
                 {landmark.location}
               </p>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground">
-                {landmark.name}
-              </h1>
+              <div className="flex items-center gap-2 group/title">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground">
+                  {landmark.name}
+                </h1>
+                <CopyButton 
+                  text={landmark.name}
+                  size="md"
+                  className="opacity-70 hover:opacity-100 transition-opacity"
+                />
+              </div>
               <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground italic">
                 {landmark.nameEnglish}
               </p>
