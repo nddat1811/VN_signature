@@ -229,7 +229,7 @@ Mọi đóng góp đều được chào đón! Vui lòng:
 
 ## 📝 License
 
-Dự án này là private project. Mọi quyền được bảo lưu.
+Dự án này là public project. Mọi quyền được bảo lưu.
 
 ## 👨‍💻 Tác giả
 
