@@ -8,6 +8,7 @@ interface Landmark {
   paragraphs?: string[]; // Optional: for detailed view with separated paragraphs
   image: string;
   images?: string[]; // Optional: additional images for gallery
+  mapUrl?: string; // Optional: Google Maps URL
 }
 
 interface Translations {
@@ -48,7 +49,8 @@ const translations: Record<Language, Translations> = {
           '/saigon-notre-dame-cathedral-interior.jpg',
           '/saigon-notre-dame-cathedral-night-view.jpg',
           '/saigon-notre-dame-cathedral-night-front.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/Dvb9W4Z29KxRZevV7'
       },
       {
         name: 'Bảo tàng Mỹ thuật',
@@ -67,7 +69,8 @@ const translations: Record<Language, Translations> = {
           '/BTMT2.jpg',
           '/BTMT3.jpg',
           '/BTMT4.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/NWHnuG5d4KRqVSnN8'
       },
       {
         name: 'Dinh Độc Lập',
@@ -86,7 +89,8 @@ const translations: Record<Language, Translations> = {
           '/Dinh2.jpg',
           '/Dinh3.jpg',
           '/Dinh4.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/chtCBPrWWow9uW8s8'
       },
       {
         name: 'Bảo tàng Chứng Tích Chiến Tranh',
@@ -98,25 +102,8 @@ const translations: Record<Language, Translations> = {
           'Bên trong bảo tàng có nhiều khu trưng bày theo chủ đề như: phòng "Tội ác chiến tranh xâm lược", phòng "Hậu quả chất độc da cam/dioxin", phòng "Nhà tù Côn Đảo thu nhỏ", và phòng trưng bày hình ảnh về phong trào phản đối chiến tranh trên thế giới. Một trong những khu vực gây ấn tượng mạnh nhất là khu chứng tích chất độc da cam, nơi trưng bày những hình ảnh, hiện vật về nạn nhân dioxin – những minh chứng đau lòng nhưng chân thật về hậu quả mà chiến tranh để lại cho nhiều thế hệ. Ngoài ra, du khách cũng có thể xem các tư liệu quốc tế, ảnh báo chí của nhiều nhiếp ảnh gia nổi tiếng từng đoạt giải Pulitzer, tạo góc nhìn khách quan về cuộc chiến tranh Việt Nam.',
           'Khu vực ngoài trời của bảo tàng đặc biệt hấp dẫn với nhiều máy bay, trực thăng, xe tăng, đại bác, và bom mìn thật từng được sử dụng trong chiến tranh. Các mô hình như "chuồng cọp" – nhà tù kiểu Pháp và kiểu Mỹ – tái hiện phương thức giam giữ khắc nghiệt của thời chiến, giúp du khách hình dung rõ hơn sự khốc liệt mà tù nhân phải chịu đựng. Dù mang nội dung nặng nề, Bảo tàng Chứng tích Chiến tranh vẫn là địa điểm quan trọng giúp mọi người thấu hiểu giá trị của hòa bình và sự hy sinh của dân tộc. Nơi đây không chỉ là điểm tham quan, mà còn là lời nhắc nhở sâu sắc về quá khứ, để thế hệ hôm nay và mai sau trân trọng hơn cuộc sống tự do, hòa bình mà chúng ta đang có.'
         ],
-        image: '/war-remnants-museum-vietnam-saigon.jpg'
-      },
-      {
-        name: 'Địa đạo Củ Chi',
-        nameEnglish: 'Cu Chi Tunnels',
-        location: 'Củ Chi, Thành phố Hồ Chí Minh (cách trung tâm TP.HCM khoảng 70 km về phía Tây Bắc)',
-        description: 'Địa đạo Củ Chi là một trong những di tích lịch sử nổi tiếng nhất của Việt Nam, nằm cách trung tâm TP.HCM khoảng 70 km về phía Tây Bắc.',
-        paragraphs: [
-          'Địa đạo Củ Chi là một trong những di tích lịch sử nổi tiếng nhất của Việt Nam, nằm cách trung tâm TP.HCM khoảng 70 km về phía Tây Bắc. Đây là hệ thống đường hầm ngầm độc đáo đã gắn liền với cuộc kháng chiến chống Mỹ, được ví như "thành phố trong lòng đất" của quân và dân Củ Chi. Địa đạo được bắt đầu đào từ những năm 1940 trong kháng chiến chống Pháp, và đến thời kỳ chống Mỹ thì được mở rộng, củng cố, trở thành một mạng lưới kiên cố trải dài hơn 200 km, thông nhau qua nhiều xã, kết nối các hầm trú ẩn, phòng họp, kho vũ khí và trạm y tế dưới lòng đất.',
-          'Điểm đặc biệt nhất của hệ thống địa đạo là thiết kế tinh vi, hoàn toàn thủ công nhưng vô cùng hiệu quả. Các đường hầm chỉ cao khoảng 80–100 cm, rộng 70–80 cm, buộc người đi phải cúi hoặc bò để di chuyển. Bên trong, địa đạo được chia thành nhiều tầng với lớp chống sập tự nhiên, hệ thống thông gió được ngụy trang khéo léo như các ụ mối hoặc bụi cây, giúp lính Mỹ gần như không thể phát hiện. Ngoài ra, người dân và chiến sĩ Củ Chi còn bố trí hàng trăm loại bẫy tre, hố chông, hầm bí mật… tạo thành hệ thống phòng thủ tự nhiên khiến quân địch khiếp sợ. Nhờ địa đạo, quân giải phóng có thể ẩn náu, sinh hoạt, chiến đấu, rồi bất ngờ xuất hiện tấn công mà không để lộ dấu vết.',
-          'Ngày nay, Địa đạo Củ Chi trở thành điểm du lịch lịch sử nổi tiếng, thu hút đông đảo du khách trong và ngoài nước. Đến đây, bạn sẽ được xem phim tư liệu, nghe thuyết minh về cuộc sống trong chiến tranh, tham quan các đường hầm được mở rộng để phù hợp cho khách quốc tế, xem mô hình bếp Hoàng Cầm, hầm hội họp, đường hầm chiến đấu và khu tái hiện chiến trường xưa. Một trải nghiệm thú vị là chui hầm dài 20–100 m, giúp du khách cảm nhận phần nào sự gian khổ của chiến sĩ năm xưa. Ngoài ra, khu du lịch còn có trường bắn thể thao quốc phòng, nơi du khách có thể thử bắn các loại súng AK, M16, Rulo… dưới sự hướng dẫn an toàn. Địa đạo Củ Chi không chỉ là một di sản độc đáo của kỹ thuật quân sự Việt Nam, mà còn là minh chứng sống động cho tinh thần kiên cường, sáng tạo và lòng yêu nước của nhân dân trong thời chiến.'
-        ],
-        image: '/dd.jpg',
-        images: [
-          '/dd.jpg',
-          '/dd2.jpg',
-          '/dd3.jpg',
-          '/dd4.jpg'
-        ]
+        image: '/war-remnants-museum-vietnam-saigon.jpg',
+        mapUrl: 'https://maps.app.goo.gl/1wMS3vZso8VZrNDs5'
       },
       {
         name: 'Bưu điện Trung tâm',
@@ -133,7 +120,8 @@ const translations: Record<Language, Translations> = {
         images: [
           '/bd.jpg',
           '/bd2.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/VSp7uD4kJ5qyPJWz8'
       },
       {
         name: 'Landmark 81',
@@ -151,7 +139,8 @@ const translations: Record<Language, Translations> = {
           '/lm1.jpg',
           '/lm2.jpg',
           '/lm3.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/fmd4N6SNmDGreA957'
       },
       {
         name: 'Phố đi bộ Nguyễn Huệ',
@@ -169,7 +158,8 @@ const translations: Record<Language, Translations> = {
           '/nh1.jpg',
           '/nh2.jpg',
           '/nh3.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/rL5zZxobU93PMZpY9'
       },
       {
         name: 'Hồ Con Rùa',
@@ -187,7 +177,27 @@ const translations: Record<Language, Translations> = {
           '/cr1.jpg',
           '/cr2.jpg',
           '/cr3.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/Go6AwH86oyuBu3xj8'
+      },
+      {
+        name: 'Địa đạo Củ Chi',
+        nameEnglish: 'Cu Chi Tunnels',
+        location: 'Củ Chi, Thành phố Hồ Chí Minh (cách trung tâm TP.HCM khoảng 70 km về phía Tây Bắc)',
+        description: 'Địa đạo Củ Chi là một trong những di tích lịch sử nổi tiếng nhất của Việt Nam, nằm cách trung tâm TP.HCM khoảng 70 km về phía Tây Bắc.',
+        paragraphs: [
+          'Địa đạo Củ Chi là một trong những di tích lịch sử nổi tiếng nhất của Việt Nam, nằm cách trung tâm TP.HCM khoảng 70 km về phía Tây Bắc. Đây là hệ thống đường hầm ngầm độc đáo đã gắn liền với cuộc kháng chiến chống Mỹ, được ví như "thành phố trong lòng đất" của quân và dân Củ Chi. Địa đạo được bắt đầu đào từ những năm 1940 trong kháng chiến chống Pháp, và đến thời kỳ chống Mỹ thì được mở rộng, củng cố, trở thành một mạng lưới kiên cố trải dài hơn 200 km, thông nhau qua nhiều xã, kết nối các hầm trú ẩn, phòng họp, kho vũ khí và trạm y tế dưới lòng đất.',
+          'Điểm đặc biệt nhất của hệ thống địa đạo là thiết kế tinh vi, hoàn toàn thủ công nhưng vô cùng hiệu quả. Các đường hầm chỉ cao khoảng 80–100 cm, rộng 70–80 cm, buộc người đi phải cúi hoặc bò để di chuyển. Bên trong, địa đạo được chia thành nhiều tầng với lớp chống sập tự nhiên, hệ thống thông gió được ngụy trang khéo léo như các ụ mối hoặc bụi cây, giúp lính Mỹ gần như không thể phát hiện. Ngoài ra, người dân và chiến sĩ Củ Chi còn bố trí hàng trăm loại bẫy tre, hố chông, hầm bí mật… tạo thành hệ thống phòng thủ tự nhiên khiến quân địch khiếp sợ. Nhờ địa đạo, quân giải phóng có thể ẩn náu, sinh hoạt, chiến đấu, rồi bất ngờ xuất hiện tấn công mà không để lộ dấu vết.',
+          'Ngày nay, Địa đạo Củ Chi trở thành điểm du lịch lịch sử nổi tiếng, thu hút đông đảo du khách trong và ngoài nước. Đến đây, bạn sẽ được xem phim tư liệu, nghe thuyết minh về cuộc sống trong chiến tranh, tham quan các đường hầm được mở rộng để phù hợp cho khách quốc tế, xem mô hình bếp Hoàng Cầm, hầm hội họp, đường hầm chiến đấu và khu tái hiện chiến trường xưa. Một trải nghiệm thú vị là chui hầm dài 20–100 m, giúp du khách cảm nhận phần nào sự gian khổ của chiến sĩ năm xưa. Ngoài ra, khu du lịch còn có trường bắn thể thao quốc phòng, nơi du khách có thể thử bắn các loại súng AK, M16, Rulo… dưới sự hướng dẫn an toàn. Địa đạo Củ Chi không chỉ là một di sản độc đáo của kỹ thuật quân sự Việt Nam, mà còn là minh chứng sống động cho tinh thần kiên cường, sáng tạo và lòng yêu nước của nhân dân trong thời chiến.'
+        ],
+        image: '/dd.jpg',
+        images: [
+          '/dd.jpg',
+          '/dd2.jpg',
+          '/dd3.jpg',
+          '/dd4.jpg'
+        ],
+        mapUrl: 'https://maps.app.goo.gl/hciUndXHfZHdkraC9'
       }
     ]
   },
@@ -219,7 +229,8 @@ const translations: Record<Language, Translations> = {
           '/saigon-notre-dame-cathedral-interior.jpg',
           '/saigon-notre-dame-cathedral-night-view.jpg',
           '/saigon-notre-dame-cathedral-night-front.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/Dvb9W4Z29KxRZevV7'
       },
       {
         name: 'Fine Arts Museum',
@@ -238,7 +249,8 @@ const translations: Record<Language, Translations> = {
           '/BTMT2.jpg',
           '/BTMT3.jpg',
           '/BTMT4.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/NWHnuG5d4KRqVSnN8'
       },
       {
         name: 'Reunification Palace',
@@ -257,7 +269,8 @@ const translations: Record<Language, Translations> = {
           '/Dinh2.jpg',
           '/Dinh3.jpg',
           '/Dinh4.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/chtCBPrWWow9uW8s8'
       },
       {
         name: 'War Remnants Museum',
@@ -269,7 +282,8 @@ const translations: Record<Language, Translations> = {
           'Inside the museum, there are many themed exhibition areas such as: the "Crimes of Aggressive War" room, the "Consequences of Agent Orange/Dioxin" room, the "Con Dao Prison Miniature" room, and the exhibition room of images about the anti-war movement around the world. One of the most impressive areas is the Agent Orange evidence area, which displays images and artifacts about dioxin victims – heartbreaking but truthful evidence of the consequences that war has left for many generations. In addition, visitors can also view international documents, press photos by many famous photographers who have won Pulitzer Prizes, providing an objective perspective on the Vietnam War.',
           'The outdoor area of the museum is particularly attractive with many real aircraft, helicopters, tanks, cannons, and bombs and mines that were used in the war. Models such as "tiger cages" – French-style and American-style prisons – recreate the harsh detention methods of wartime, helping visitors better visualize the brutality that prisoners had to endure. Despite its heavy content, the War Remnants Museum remains an important place that helps people understand the value of peace and the sacrifices of the nation. This place is not only a tourist attraction, but also a profound reminder of the past, so that today\'s and future generations will cherish more the free and peaceful life we have.'
         ],
-        image: '/war-remnants-museum-vietnam-saigon.jpg'
+        image: '/war-remnants-museum-vietnam-saigon.jpg',
+        mapUrl: 'https://maps.app.goo.gl/1wMS3vZso8VZrNDs5'
       },
       {
         name: 'Cu Chi Tunnels',
@@ -287,7 +301,8 @@ const translations: Record<Language, Translations> = {
           '/dd2.jpg',
           '/dd3.jpg',
           '/dd4.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/hciUndXHfZHdkraC9'
       },
       {
         name: 'Central Post Office',
@@ -304,7 +319,8 @@ const translations: Record<Language, Translations> = {
         images: [
           '/bd.jpg',
           '/bd2.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/VSp7uD4kJ5qyPJWz8'
       },
       {
         name: 'Landmark 81',
@@ -322,7 +338,8 @@ const translations: Record<Language, Translations> = {
           '/lm1.jpg',
           '/lm2.jpg',
           '/lm3.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/fmd4N6SNmDGreA957'
       },
       {
         name: 'Nguyen Hue Walking Street',
@@ -340,7 +357,8 @@ const translations: Record<Language, Translations> = {
           '/nh1.jpg',
           '/nh2.jpg',
           '/nh3.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/rL5zZxobU93PMZpY9'
       },
       {
         name: 'Turtle Lake',
@@ -358,7 +376,8 @@ const translations: Record<Language, Translations> = {
           '/cr1.jpg',
           '/cr2.jpg',
           '/cr3.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/Go6AwH86oyuBu3xj8'
       }
     ]
   },
@@ -390,7 +409,8 @@ const translations: Record<Language, Translations> = {
           '/saigon-notre-dame-cathedral-interior.jpg',
           '/saigon-notre-dame-cathedral-night-view.jpg',
           '/saigon-notre-dame-cathedral-night-front.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/Dvb9W4Z29KxRZevV7'
       },
       {
         name: '美术博物馆',
@@ -409,7 +429,8 @@ const translations: Record<Language, Translations> = {
           '/BTMT2.jpg',
           '/BTMT3.jpg',
           '/BTMT4.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/NWHnuG5d4KRqVSnN8'
       },
       {
         name: '统一宫',
@@ -428,7 +449,8 @@ const translations: Record<Language, Translations> = {
           '/Dinh2.jpg',
           '/Dinh3.jpg',
           '/Dinh4.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/chtCBPrWWow9uW8s8'
       },
       {
         name: '战争遗迹博物馆',
@@ -440,7 +462,8 @@ const translations: Record<Language, Translations> = {
           '博物馆内有许多主题展览区，如："侵略战争罪行"室、"橙剂/二恶英后果"室、"昆岛监狱缩影"室，以及展示世界各地反战运动图像的展览室。最令人印象深刻的区域之一是橙剂证据区，展示关于二恶英受害者的图像和文物——这是战争给多代人留下的令人心碎但真实的证据。此外，游客还可以查看国际文件、曾获得普利策奖的许多著名摄影记者的新闻照片，提供对越南战争的客观视角。',
           '博物馆的户外区域特别吸引人，有许多真实的飞机、直升机、坦克、大炮和战争中使用的炸弹和地雷。诸如"虎笼"——法式和美式监狱——等模型重现了战时的严酷监禁方式，帮助游客更好地想象囚犯必须忍受的残酷。尽管内容沉重，战争遗迹博物馆仍然是一个重要的地方，帮助人们理解和平的价值和民族的牺牲。这个地方不仅是旅游景点，也是对过去的深刻提醒，让今天和未来的世代更加珍惜我们所拥有的自由、和平的生活。'
         ],
-        image: '/war-remnants-museum-vietnam-saigon.jpg'
+        image: '/war-remnants-museum-vietnam-saigon.jpg',
+        mapUrl: 'https://maps.app.goo.gl/1wMS3vZso8VZrNDs5'
       },
       {
         name: '古芝地道',
@@ -458,7 +481,8 @@ const translations: Record<Language, Translations> = {
           '/dd2.jpg',
           '/dd3.jpg',
           '/dd4.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/hciUndXHfZHdkraC9'
       },
       {
         name: '中央邮局',
@@ -475,7 +499,8 @@ const translations: Record<Language, Translations> = {
         images: [
           '/bd.jpg',
           '/bd2.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/VSp7uD4kJ5qyPJWz8'
       },
       {
         name: '地标塔81',
@@ -493,7 +518,8 @@ const translations: Record<Language, Translations> = {
           '/lm1.jpg',
           '/lm2.jpg',
           '/lm3.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/fmd4N6SNmDGreA957'
       },
       {
         name: '阮惠步行街',
@@ -511,7 +537,8 @@ const translations: Record<Language, Translations> = {
           '/nh1.jpg',
           '/nh2.jpg',
           '/nh3.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/rL5zZxobU93PMZpY9'
       },
       {
         name: '龟湖',
@@ -529,7 +556,8 @@ const translations: Record<Language, Translations> = {
           '/cr1.jpg',
           '/cr2.jpg',
           '/cr3.jpg'
-        ]
+        ],
+        mapUrl: 'https://maps.app.goo.gl/Go6AwH86oyuBu3xj8'
       }
     ]
   }
